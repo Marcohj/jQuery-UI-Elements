@@ -157,46 +157,53 @@ $.widget("uie.formradio", {
     options: {},
     _create: function () {
         var self = this;
+		this.radiogroup = $('input[name=' + this.element.attr('name') + ']');
 
-        this.radiogroup = $('input[name=' + this.element.attr('name') + ']');
-        this.findlabel = this.element.parent().children('label').bind('click', function (e) {
+        this.buildradio = this.element.wrap('<div class="ui-form-radio ui-button" />').parent().append('<div class="ui-form-replace ui-state-default ui-corner-all"><span class="ui-icon ui-icon-radio-on"></span></div>');
+        this.icon = this.element.parent().children('.ui-form-replace').children('span');
+        this.label = $("label[for="+this.element.attr("id")+"]");
+        
+        //BINDS
+        this.label.bind("mouseenter mouseleave", function (e) {
+            self.click(e);
+        });       
+		this.element.bind("click.radio", function() {
+			self._refresh();
+		}).bind("mouseenter mouseleave", function (e) {
+            self._hover(e);
+        });
+        this.icon.bind('click', function (e) {
             self.click(e);
         }).bind("mouseenter mouseleave", function (e) {
             self._hover(e);
         });
-
-        var checkstate;
-        if (this.element.is(':checked')) {
-            checkstate = 'ui-icon-bullet';
+        self._refresh();
+    },
+    click: function (e) {
+        this.radiogroup.each(function () {
+            $(this).parent().find('.ui-icon').addClass('ui-icon-radio-on').removeClass('ui-icon-bullet').attr( "aria-checked", false );
+            $(this).attr('checked', 'false');
+        });
+        this.icon.addClass('ui-icon-bullet').removeClass('ui-icon-radio-on').attr( "aria-checked", true );
+        this.element.attr('checked', true);
+    },
+    _refresh: function(e) {
+		var checked = this.element.is(":checked");
+        if (checked) {
+            this.icon.addClass('ui-icon-bullet').removeClass('ui-icon-radio-on').attr( "aria-checked", checked );
         } else {
-            checkstate = 'ui-icon-radio-on';
+            this.icon.addClass('ui-icon-radio-on').removeClass('ui-icon-bullet').attr( "aria-checked", checked );
         }
-
-        this.buildradio = this.element.wrap('<div class="ui-form-radio ui-button" />').parent().append('<div class="ui-form-replace ui-state-default ui-corner-all"><span class="ui-icon ' + checkstate + '"></span></div>').bind('click', function (e) {
-            self.click(e);
-        }).bind("mouseenter mouseleave", function (e) {
-            self._hover(e);
-        });
-
     },
     _hover: function (e) {
         if (e.type === "mouseenter") {
-            this.element.addClass('ui-state-active').parent().children('.ui-form-replace').addClass('ui-state-active');
+            this.icon.parent().addClass('ui-state-active');
         } else {
-            this.element.removeClass('ui-state-active').parent().children('.ui-form-replace').removeClass('ui-state-active');
+            this.icon.parent().removeClass('ui-state-active');
         }
         this._trigger("hover", e, {
             hovered: $(e.target)
         });
-    },
-    click: function (e) {
-        var $target = $(e.target);
-        this.radiogroup.each(function () {
-            $(this).parent().find('.ui-icon').addClass('ui-icon-radio-on').removeClass('ui-icon-bullet');
-            $(this).attr('checked', 'false');
-        });
-        this.element.parent().find('.ui-icon').addClass('ui-icon-bullet').removeClass('ui-icon-radio-on');
-        this.element.attr('checked', 'checked');
     },
     destroy: function () {
         // TODO
@@ -225,13 +232,13 @@ $.widget("uie.formcheckbox", {
             self._hover(e);
         });
         this.icon.bind('click', function (e) {
-            self.iconclick(e);
+            self.click(e);
         }).bind("mouseenter mouseleave", function (e) {
             self._hover(e);
         });
         self._refresh();
     },
-    iconclick: function (e) {
+    click: function (e) {
         if (this.element.is(':checked')) {
             this.icon.addClass('ui-icon-none').removeClass('ui-icon-check');
             this.element.attr('checked', false);
