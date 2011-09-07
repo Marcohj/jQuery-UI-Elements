@@ -9,7 +9,6 @@ FORMS
 * Input / Textarea
 * Sheckboxes
 * Radiobuttons
-
 SEARCH FORM
 * Searchform with "reset" button.
 TABLES
