@@ -1,35 +1,27 @@
-.ui-table td, .ui-table th {padding:0.3em 1em;}
-.ui-form .ui-form-element-seperator, .ui-form {display:block; padding:0.2em;}
-.ui-form .ui-label {min-width:200px; width:10%; display:block; float:left; padding:0.2em;}
-.ui-widget.ui-form .ui-form-textarea, .ui-widget.ui-form .ui-form-text { padding:0.2em; background-image:none;}
-.label-relative, .ui-select-container, .ui-form-radio, .ui-form-checkbox  {position:relative; float:left;}
-.ui-form-checkbox input, .ui-form-radio input  {position:absolute; left:30px; top:0; z-index:1;}
-.ui-icon-none {background-position:top right;}
-.ui-background-none {background-image:none;}
-
-.ui-paging {list-style:none; margin:0; padding:0;}
-.ui-paging .ui-paging-item {margin:0; float:left; display:block;}
-.ui-paging .ui-paging-item a {padding:0.2em 0.6em;}
-
-.ui-search-box .ui-search-input, .ui-search-box .ui-a-search {padding:0.25em; float:left;}
-.ui-search-box .ui-a-search {text-decoration:none; padding-right:10px; border-left:0;}
-.ui-search-box .ui-a-search .ui-icon {float:left;}
-.ui-search-box .ui-input-wrapper {position:relative; float:left;}
-.ui-search-box .ui-search-close {position:absolute; top:50%; margin-top:-8px; right:5px;}
- 		
-
 /* NEW STYLE
 ----------------------------------*/
+.ui-icon-none {background-position:top right;}
 .ui-background-none {background-image:none;}
 .ui-state-default.ui-style-none, .ui-state-active.ui-style-none, .ui-state-hover.ui-style-none, .ui-style-none {background:none transparent; border:0 none;}
 .ui-state-default.ui-background-none, .ui-state-active.ui-background-none, .ui-state-hover.ui-background-none, .ui-background-none {background-image:none;}
 
+/* TABLE */
+.ui-table td, .ui-table th {padding:0.3em 1em;}
+
+/* SEARCH */
 .ui-search .ui-search-input {padding:0.4em; float:left;}
 .ui-search .ui-search-submit {border-left:none; font-weight:bold;}
 .ui-search .ui-position-wrapper {position:relative; float:left;}
 .ui-search .ui-search-reset {position:absolute; top:50%; margin-top:-9px; right:0;}
 
+/* FORMS */
 .ui-form-input {padding:0.2em; }
+.ui-form-checkbox input, .ui-form-radio input  {position:absolute; left:0; top:0; z-index:-1;}
+
+/* PAGING */
+.ui-paging {list-style:none; margin:0; padding:0;}
+.ui-paging .ui-paging-item {margin:0; float:left; display:block;}
+.ui-paging .ui-paging-item a {padding:0.2em 0.6em;}
 
 
 /*.ui-state-active, .ui-state-hover, .ui-state-default {
