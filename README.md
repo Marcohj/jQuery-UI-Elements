@@ -6,20 +6,16 @@ It aims to provide additional widget to the original framework, while following 
 
 Currently in the works:
 FORMS
-
 * Input / Textarea
-
 * Sheckboxes
-
 * Radiobuttons
-
 
 SEARCH FORM
 * Searchform with "reset" button.
 TABLES
 * Layout (No additional)
  PAGING
-* Basic layout of paging (No additional functionality yet)
+ * Basic layout of paging (No additional functionality yet)
  
 ##TODO:
 TABLE
