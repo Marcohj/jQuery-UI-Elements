@@ -1,0 +1,26 @@
+----TABLE----
+Search for thead/tbody, make style if they exist, otherwise dont.
+
+----FORM----
+File Input Replacement.
+Inline label for input?
+Radio/Checkbox DISABLED...
+
+----SEARCH----
+BUTTON instead of submit???
+
+----PAGING----
+DO ACTUALLY PAGING????
+
+----NEW ELEMENTS----
+Widgetbar
+Extend Overlay with Resize to fullscreen, Minimize to tray, Collapse, 
+RICH TEXT EDITOR
+NOTIFICATIONS
+Implement TOOLTIPS, should input contain tooltip??
+Implement AutoSuggest to Searchform
+
+Test
+
+SEEE
+http://dochoffiday.com/?page=1

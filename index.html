@@ -1,0 +1,131 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Page Title</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/master.css" />
+	<link rel="stylesheet" type="text/css" href="css/ui/orango/jquery-ui-1.8.16.custom.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.ui.elements.css" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.elements.js"></script>
+	<script src="js/jquery.ui.selectmenu.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		//$('#switcher').themeswitcher();
+		$('#paging').paging();
+		$('#table').table();
+		$('#form input:text, textarea').forminput();
+		$('#search').search();
+		$('#form input:radio').formradio();
+		$('#form input:checkbox').formcheckbox();
+		
+	});
+ 	</script>
+ 	<style type="text/css" media="screen">
+ 		body, html {font:11px "Trebuchet MS",sans-serif; margin:0;}
+ 		body {padding:30px;}
+ 		h1 {font-size:2em; font-weight:bold; padding:20px 0 5px; margin:0;}
+ 		h2 {font-size:1.6em; font-weight:bold; padding:20px 0 5px; margin:0;}
+ 		label {float:left; padding:0.2em 2em;}
+ 		#form p {overflow:auto;}
+ 		#form .ui-form-text {width:250px;}
+ 		#form .ui-form-textarea {width:300px;}
+ 	</style>
+ 	
+</head>
+
+<body>
+		
+<script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"></script>
+<div id="switcher"></div>
+	
+	<div>
+		<h1>Table Elements</h1>
+		<table id="table">
+			<thead>
+				<th>Heading1</th>
+				<th>Heading2</th>
+				<th>Heading3</th>
+				<th>Heading4</th>
+				<th>Heading5</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+				</tr>
+				<tr>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+				</tr>
+				<tr>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+				</tr>
+				<tr>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+					<td>Data here</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div>
+		<h1>Paging</h1>
+		<ul id="paging">
+			<li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+		</ul>
+	</div>
+	
+	<div>
+		<h1>Search</h1>
+		<form id="search">
+			<input type="text" />
+			<input type="submit" value="Search" />
+		</form>
+	</div>
+	
+	<div>
+		<h1>Form elements</h1>
+		<form id="form">
+			<h2>Inputboxes</h2>
+			<p>		<label for="1">Label</label>	<input type="text" name="item1" id="1" />		</p>
+			<p>		<label for="2">Label</label>	<input type="text" name="item2" id="2" />		</p>
+			<p>		<label for="3">Label</label>	<input type="text" name="item3" id="3" />		</p>
+			<p>		<label for="4">Label</label>	<input type="text" name="item4" id="4" disabled="disabled" />		</p>
+			<h2>Textarea</h2>
+			<p>		<label for="5">Label</label>	<textarea name="item5" id="5" rows="5"></textarea>		</p>
+			<h2>Radiobuttons</h2>
+			<p>		<label for="8">Label</label>	<input type="radio" name="radios" id="8" />		</p>
+			<p>		<label for="9">Label</label>	<input type="radio" name="radios" id="9" />		</p>
+			<p>		<label for="10">Label</label>	<input type="radio" name="radios" id="10" />	</p>
+			<h2>Checkboxes</h2>
+			<p>		<label for="11">Label</label>	<input type="checkbox" name="checkboxes1" id="11" />	</p>
+			<p>		<label for="12">Label</label>	<input type="checkbox" name="checkboxes2" id="12" />	</p>
+			<p>		<label for="13">Label</label>	<input type="checkbox" name="checkboxes3" id="13" />	</p>
+		</form>
+	</div>
+	
+</body>
+</html>
