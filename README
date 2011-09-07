@@ -2,28 +2,40 @@
 PLEASE, PLEASE ALL HELP WELCOME! SUGGESTIONS... CODE COMMITS... 
 EVERYTHING.. PLEASE PLEASE!
 ----------------------------------------------------
-
-jQuery UI Elements is a set of extensions to the jQuery UI framework.
-It aims to provide additional widget to the original framework, while following the original coding and layout.
-
+<h1>jQuery UI Elements</h1>
+<p>jQuery UI Elements is a set of extensions to the jQuery UI framework.</p>
+<p>It aims to provide additional widget to the original framework, while following the original coding and layout.)</p>
+<p>
 Currently in the works:
-FORMS
--Input / Textarea
--Sheckboxes
--Radiobuttons
+</p>
+<p>
+<strong>FORMS</strong>
+<ul>
+	<li>Input / Textarea</li>
+	<li>Sheckboxes</li>
+	<li>Radiobuttons</li>
+</ul>
+</p>
+<p>
+<strong>SEARCH FORM</strong>
+<ul>
+	<li>Searchform with "reset" button</li>
+</ul>
+</p>
+<p>
+<strong>TABLES</strong>
+<ul>
+	<li>Layout (No additional)</li>
+</ul>
+ </p>
+<p>
+<strong>PAGING</strong>
+ <ul>
+	<li>Basic layout of paging (No additional functionality yet)</li>
+</ul>
+</p>
 
-SEARCH FORM
--Searchform with "reset" button.
-
-TABLES
--Layout (No additional)
- 
- PAGING
--Basic layout of paging (No additional functionality yet)
- 
-----------------------------------------------------
-TODO:
-----------------------------------------------------
+<h2>TODO</h2>
 TABLE
 -Search for thead/tbody, make style if they exist, otherwise dont.
 
@@ -38,12 +50,12 @@ SEARCH FORM
 PAGING
 -Add actually paging or?
 
-----------------------------------------------------
-NEW ELEMENTS UNDER CONSIDERATION
-----------------------------------------------------
--Widgetbar
--Extend Overlay with Resize to fullscreen, Minimize to tray, Collapse, 
--RICH TEXT EDITOR
--NOTIFICATIONS
--Implement TOOLTIPS, should input contain tooltip??
--Implement AutoSuggest to Searchform
+<h2>NEW ELEMENTS UNDER CONSIDERATION</h2>
+<ul>
+	<li>Widgetbar</li>
+	<li>Extend Overlay with Resize to fullscreen, Minimize to tray, Collapse </li>
+	<li>RICH TEXT EDITOR</li>
+	<li>NOTIFICATIONS</li>
+	<li>Implement TOOLTIPS, should input contain tooltip??</li>
+	<li>Implement AutoSuggest to Searchform</li>
+</ul>
