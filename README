@@ -1,3 +1,8 @@
+----------------------------------------------------
+PLEASE, PLEASE ALL HELP WELCOME! SUGGESTIONS... CODE COMMITS... 
+EVERYTHING.. PLEASE PLEASE!
+----------------------------------------------------
+
 jQuery UI Elements is a set of extensions to the jQuery UI framework.
 It aims to provide additional widget to the original framework, while following the original coding and layout.
 
@@ -16,9 +21,9 @@ TABLES
  PAGING
  - Basic layout of paging (No additional functionality yet)
  
---------------------------
+----------------------------------------------------
 TODO:
---------------------------
+----------------------------------------------------
 TABLE
  - Search for thead/tbody, make style if they exist, otherwise dont.
 
@@ -33,9 +38,9 @@ SEARCH FORM
 PAGING
  - Add actually paging or?
 
---------------------------
+----------------------------------------------------
 NEW ELEMENTS UNDER CONSIDERATION
---------------------------
+----------------------------------------------------
  - Widgetbar
  - Extend Overlay with Resize to fullscreen, Minimize to tray, Collapse, 
  - RICH TEXT EDITOR
