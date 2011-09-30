@@ -130,20 +130,40 @@ $.widget("uie.search", {
 // UI - INPUT
 //********************
 $.widget("uie.forminput", {
-    options: {},
+    options: {
+    	inline: false
+    },
     _create: function () {
         var self = this;
+        this.label = $("label[for="+this.element.attr("id")+"]");
 
         this.addclass = this.element.addClass('ui-widget ui-form-input ui-state-default ui-corner-all ui-background-none').bind('focusin focusout', function (e) {
-            self._inputfocus(e);
+            self._checkval(e);
         });
         
         this.disable = (this.element.is(':disabled') ? ' ui-state-disabled' : '');
         this.gettype = (this.element.attr('type') ? this.element.attr('type') : this.element.get(0).tagName.toLowerCase());
         this.inputtype = this.element.addClass('ui-form-' + this.gettype + this.disable);
+        
+        if(this.options.inline === true) {
+        	this.element.val(this.label.text());
+        	this.label.hide();
+        }
+        
     },
-    _inputfocus: function (e) {
-        $(e.target)[(e.type === "focusin" ? "add" : "remove") + "Class"]("ui-state-active");
+    _checkval: function (e) {
+        var $target = $(e.target);
+        if (e.type === "focusin") {
+            $target.addClass('ui-state-active');
+            if (($target.val()) === this.label.text()) {
+                $target.val('');
+            }
+        } else {
+            $target.removeClass('ui-state-active');
+            if (($target.val()) === '') {
+                $target.val(this.label.text());
+            }
+        }
     },
     destroy: function () {
         // TODO
@@ -165,7 +185,9 @@ $.widget("uie.formradio", {
         
         //BINDS
         this.label.bind("mouseenter mouseleave", function (e) {
-            self.click(e);
+            self._hover(e);
+        }).bind('click', function (e) {
+            self.click();
         });       
 		this.element.bind("click.radio", function() {
 			self._refresh();
@@ -190,6 +212,10 @@ $.widget("uie.formradio", {
     _refresh: function(e) {
 		var checked = this.element.is(":checked");
         if (checked) {
+	        this.radiogroup.each(function () {
+	            $(this).parent().find('.ui-icon').addClass('ui-icon-radio-on').removeClass('ui-icon-bullet').attr( "aria-checked", false );
+	            $(this).attr('checked', 'false');
+	        });
             this.icon.addClass('ui-icon-bullet').removeClass('ui-icon-radio-on').attr( "aria-checked", checked );
         } else {
             this.icon.addClass('ui-icon-radio-on').removeClass('ui-icon-bullet').attr( "aria-checked", checked );

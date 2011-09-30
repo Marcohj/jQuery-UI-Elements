@@ -21,11 +21,11 @@ SEARCH FORM
 
 TABLES
 
-* Layout (No additional)
+* Layout (No additional functions)
 
  PAGING
  
- * Basic layout of paging (No additional functionality yet)
+ * Basic layout of paging (No additional functionality - yet)
  
 ##TODO:
 TABLE
@@ -35,8 +35,6 @@ TABLE
 FORM
 
 * File Input Replacement.
-
-* Inline label for input?
 
 * Radio/Checkbox DISABLED...
 
